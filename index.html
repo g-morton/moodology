@@ -9,5 +9,19 @@
     <h1>Hello World!</h1>
     <button id="fetchMessage">Fetch Message</button>
     <p id="message"></p>
+
+
+    <script>
+        var f = "https://moodology.azurewebsites.net/api/HelloWorld?code=zxiHdOeQxe0BAxudMoY0zIBv35FFkUcqIywN2xsnh0k3AzFu_FJCTw==";
+    document.getElementById('fetchMessage').addEventListener('click', function() {
+        fetch(f)
+            .then(response => response.text())
+            .then(data => document.getElementById('message').textContent = data)
+            .catch(error => console.error('Error:', error));
+    });
+</script>
+
+<!--  -->
+    
 </body>
 </html>
